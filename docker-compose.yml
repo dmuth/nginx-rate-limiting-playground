@@ -1,0 +1,19 @@
+
+
+services:
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      # Custom config
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      # Our docroot
+      #- ./html:/usr/share/nginx/html:ro
+
+  httpbin:
+    image: dmuth1/fastapi-httpbin
+    ports:
+      - "8081:80"
+
