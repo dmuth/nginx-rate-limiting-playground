@@ -5,7 +5,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-      - "8080:80"
+      - "8000:80"
     volumes:
       # Custom config
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
@@ -15,5 +15,5 @@ services:
   httpbin:
     image: dmuth1/fastapi-httpbin
     ports:
-      - "8081:80"
+      - "8001:80"
 

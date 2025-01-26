@@ -5,5 +5,5 @@ set -e
 
 pushd $(dirname $0)/.. >/dev/null
 
-docker-compose logs
+docker-compose logs $@
 
