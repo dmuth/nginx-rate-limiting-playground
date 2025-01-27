@@ -17,3 +17,8 @@ services:
     ports:
       - "8001:80"
 
+  tools:
+    build:
+      context: .
+      dockerfile: Dockerfile-tools
+

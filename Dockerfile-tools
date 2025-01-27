@@ -1,0 +1,10 @@
+
+FROM alpine:latest
+
+RUN apk add --no-cache apache2-utils
+
+COPY bin/entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+
