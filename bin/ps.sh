@@ -5,5 +5,5 @@ set -e
 
 pushd $(dirname $0)/.. >/dev/null
 
-docker-compose ps
+docker-compose ps $@
 
