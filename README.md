@@ -37,6 +37,13 @@ Those scripts can be used to stand up and test out Nginx's rate-limiting:
   - Script to spawn an interactive shell on the `tools` container.
 
 
+## Future Plans
+
+None at the moment!  I build this app mostly to play around with Nginx proxying and rate limiting.  If I have more work to do in that space, I may come back to this project.  Otherwise I won't.
+
+Feel free to make use of this project if you want to play with Nginx rate limiting, though!
+
+
 ## Contact
 
 You can find me on the web at [https://www.dmuth.org/contact](https://www.dmuth.org/contact), or
