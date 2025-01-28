@@ -1,0 +1,16 @@
+
+#
+# How many requests per second?
+#
+NGINX_RATE_PER_SEC=1
+
+#
+# How many additional requests can be queued before anything is rejected.
+#
+NGINX_BURST=2
+
+#
+# Number of requests in the burst queue that are delayed in order to maintain the rate.
+#
+NGINX_DELAY=1
+

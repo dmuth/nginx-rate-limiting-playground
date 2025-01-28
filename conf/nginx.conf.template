@@ -32,7 +32,7 @@ http {
   #include /etc/nginx/conf.d/*.conf;
 
   # Set a zone for rate limiting
-  limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s;
+  limit_req_zone $binary_remote_addr zone=one:10m rate=${NGINX_RATE_PER_SEC}r/s;
 
   server {
 
@@ -41,11 +41,9 @@ http {
     location / {
 
       # Set our rate limiting
-      #limit_req zone=one burst=5 nodelay;
-      #limit_req zone=one burst=1 nodelay;
-      #limit_req zone=one burst=10 delay=2;
-      #limit_req zone=one burst=4 nodelay;
-      limit_req zone=one burst=4 delay=1;
+      #limit_req zone=one burst=${NGINX_BURST} nodelay;
+      limit_req zone=one burst=${NGINX_BURST} delay=${NGINX_DELAY};
+
       limit_req_status 429; # Too many requests
 
       proxy_pass http://httpbin/;
