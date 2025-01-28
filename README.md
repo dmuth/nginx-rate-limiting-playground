@@ -18,6 +18,7 @@ The containers are:
 
 Edit the `env` file to change settings accordingly in the Nginx config file.  Then start the containers and run something like `./bin/exec-tools-ab.sh -n5` to run 5 queries against the Nginx server.
 
+You can also edit `conf/nginx.conf.template` if you want to try other configurations in Nginx.
 
 ### Scripts
 
