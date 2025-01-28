@@ -24,16 +24,16 @@ Edit the `env` file to change settings accordingly in the Nginx config file.  Th
 The `bin/` directory contains a ton of helper scripts which (mostly) map to various Docker Compose commands.
 Those scripts can be used to stand up and test out Nginx's rate-limiting:
 
-- ./bin/build.sh - Build containers
-- ./bin/up-d.sh - Start containers in the background
-  - up.sh - Use this if you want to start containers in the foreground
-- ./bin/ps.sh - View running containers
-- ./bin/logs-f.sh - View logs from running containers
-- ./bin/restart.sh - Restart containers
-- ./bin/kill.sh - Kill all containers
-- ./bin/exec-tools-ab.sh
+- `./bin/build.sh` - Build containers
+- `./bin/up-d.sh` - Start containers in the background
+  - `up.sh` - Use this if you want to start containers in the foreground
+- `./bin/ps.sh` - View running containers
+- `./bin/logs-f.sh` - View logs from running containers
+- `./bin/restart.sh` - Restart containers
+- `./bin/kill.sh` - Kill all containers
+- `./bin/exec-tools-ab.sh`
   - Wrapper to run `ab` against the `nginx` container from the `tools` container
-- ./bin/exec-tools.sh 
+- `./bin/exec-tools.sh` 
   - Script to spawn an interactive shell on the `tools` container.
 
 
