@@ -10,10 +10,16 @@ The containers are:
   - Accessible directly via [http://localhost:8001/](http://localhost:8001/)
 - `nginx` - An Nginx webserver acting as a proxy to `httpbin`, along with some rate limiting.
   - Accessible directly via [http://localhost:8000/](http://localhost:8000/)
+  - Rate limiting settings should be configured in the `env` file.
 - `tools` - A container which has an instance of Apache Benchmark for testing purposes.
 
 
 ## Usage
+
+Edit the `env` file to change settings accordingly in the Nginx config file.  Then start the containers and run something like `./bin/exec-tools-ab.sh -n5` to run 5 queries against the Nginx server.
+
+
+### Scripts
 
 The `bin/` directory contains a ton of helper scripts which (mostly) map to various Docker Compose commands.
 Those scripts can be used to stand up and test out Nginx's rate-limiting:
